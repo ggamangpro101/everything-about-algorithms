@@ -1,4 +1,6 @@
 # Everything About Algorithms
+<img src="src=https://github.com/ggamangpro101/everything-about-algorithms/blob/master/image/banner.png" />
+
 In this repository, I aim to organize and showcase various algorithms. This will include algorithms from my coursework as well as other useful and widely applicable algorithms.
 
 ## CSE 551 Foundations of Algorihtms
