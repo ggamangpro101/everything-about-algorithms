@@ -73,6 +73,13 @@ Given four individuals (Alex, Bob, Chris, David) and their ranked preferences, d
 
 **Instability**: Alex prefers Chris over David. Chris prefer Alex over Bob. Alex and Chris both prefer each other over their assigned roommates (David and Bob). So, this is **Unstable**.
 
+**Conclusion:**  
+Every possible pairing leads to instability, meaning no stable matching exists for this set of preferences.
+
+**Observation**  
+Stable matchings **do not always exist** for the **Stable Roommate Problem**.
+Unlike the Stable Matching Problem, the inherent preferences in the roommate setup can create situations where stability is impossible, as shown in the example.
+
 
 ## Gale-Shapley Algorithm
 The **Gale-Shapley Algorithm** (also called the "Propose-and-Reject" algorithm) is a method to find a stable matching.
