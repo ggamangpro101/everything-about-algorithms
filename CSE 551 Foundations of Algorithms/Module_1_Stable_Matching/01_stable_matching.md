@@ -55,7 +55,7 @@ Given four individuals (Alex, Bob, Chris, David) and their ranked preferences, d
 **Paring 1**  
 **Alex-Bob** and **Chris-David**  
 <p align=center>
-<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Roommate_Pref_List_001.png" width=50%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Roommate_Pref_List_002.png" width=50%, height=50%/>
 </p>
 
 Instability: Bob prefers Chris over Alex. Chris prefer Bob over David. Bob and Chris both prefer each other over their assigned roommates (Alex and David). So, this is **Unstable**.
