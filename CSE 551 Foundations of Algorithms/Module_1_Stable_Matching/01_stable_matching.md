@@ -47,7 +47,10 @@ Given three men **(Alex, Bob, David)** and three women **(Emily, Megan, Grace)**
 
 Unlike the Stable Matching Problem, where a stable matching always exists, the Stable Roommate Problem does not guarantee a stable matching.
 ### Example
-Given four individuals (A, B, C, D) and their ranked preferences, determine whether a stable roommate assignment exists.
+Given four individuals (Alex, Bob, Chris, David) and their ranked preferences, determine whether a stable roommate assignment exists.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Roommate_Pref_List_001.png" width=50%, height=50%/>
+</p>
 
 ## Gale-Shapley Algorithm
 The **Gale-Shapley Algorithm** (also called the "Propose-and-Reject" algorithm) is a method to find a stable matching.
