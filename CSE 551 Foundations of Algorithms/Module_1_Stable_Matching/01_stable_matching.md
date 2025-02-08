@@ -1,34 +1,39 @@
 # Module 1 Stable Matching
 
-**Stable matching** is a concept from algorithms and game theory. It’s about pairing people or groups in a way that respects their **preferences**, so everyone ends up in a stable arrangement where no two participants would rather be matched with each other than their current matches.
+In module 1, we will explore **algorithms**, why they matter, and how they help solve problems. We’ll focus on the **Stable Matching Problem**, learning the right algorithmic techniques to solve it and how to evaluate those solutions. You will also get a quick introduction to **five key problems**: **Interval Scheduling**, **Weighted Interval Scheduling**, **Bipartite Matching**, **Independent Set**, and **Competitive Facility Location**.
 
 ## Key Terms
-- **Stable Matching:** A pairing where there are no two participants (e.g., a man and a woman, or a student and a school) who would both prefer to be matched with each other over their current partners.
-- **Unstable Pair:** A pair of participants who both prefer each other over their current matches. If such a pair exists, the matching is considered unstable.
-- **Perfect Matching:** A pairing where every participant is matched to exactly one partner.
+- **Perfect matching** means that everyone is paired up in a one-to-one relationship, with no one left unmatched. Each person has exactly one partner.
+- **Stability** in a matching means that no two people have a reason to abandon their assigned partners for each other. If a pair—let’s call them A and B—both prefer each other over their current matches, they might choose to leave their assigned partners and form a new pair, disrupting the existing arrangement. This situation is called instability.
+- **Stable matching** ensures that no such dissatisfied pairs exist. It guarantees that within the given preferences, every person is matched in a way where no two individuals would rather be with each other than their assigned partners.
+- **Unstable matching** happens when two people like each other more than their current partners. If this happens, they might leave their matches to be together, making the matching unstable.
+- **Stable matching problem** is about finding such a pairing using the preference lists of **n** men and **n** women, ensuring that the final match has no unstable pairs that could lead to switching.
 
 ## Problem Definition
-The **Stable Matching Problem** is defined as:
+The Stable Matching Problem involves finding a stable pairing between two equally sized groups, where each member has a ranked preference list. The goal is to ensure that no two individuals would prefer each other over their assigned partners. This concept can be demonstrated through various examples.
 - **Input:** Two groups of participants (e.g., men and women), each with a preference list ranking members of the opposite group.
 - **Output:** A stable matching, if one exists.
 
 ### Example
-There are 3 men (Alex, Bob, David) and 3 women (Emily, Megan, Grace), and their preferences are:  
+Given three men **(Alex, Bob, David)** and three women **(Emily, Megan, Grace)**, along with their preference lists, determine a **stable matching** where no two individuals prefer each other over their assigned partners.
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Mens_Pref_List.png" width=45%, height=50%/>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Womens_Pref_List.png" width=45%, height=50%/>
 </p>
 
-Q. Is assignment **Alex-Grace**, **Bob-Megan** and **David-Eemily** stable?
+**Q.** Is assignment **Alex-Grace**, **Bob-Megan** and **David-Eemily** stable?
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Mens_Pref_List_001.png" width=45%, height=50%/>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Womens_Pref_List_001.png" width=45%, height=50%/>
 </p>
-A. No, because Alex and Megan will hook up.
+
+**A.** No, because Alex and Megan will hook up.
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Mens_Pref_List_002.png" width=45%, height=50%/>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Womens_Pref_List_002.png" width=45%, height=50%/>
 </p>
+
+**Q.** Is assignment **Alex-Emily**, **Bob-Megan** and **David-Grace** stable?
 
 ## Gale-Shapley Algorithm
 The **Gale-Shapley Algorithm** (also called the "Propose-and-Reject" algorithm) is a method to find a stable matching.
