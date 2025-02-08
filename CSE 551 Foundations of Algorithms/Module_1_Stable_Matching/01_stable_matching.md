@@ -41,6 +41,11 @@ Given three men **(Alex, Bob, David)** and three women **(Emily, Megan, Grace)**
 
 ## Stable Roomate Problem
 **Stable Roommate Problem** is a variation of the Stable Matching Problem, where 2n individuals need to be paired into roommate pairs. Unlike the Stable Matching Problem, where stability can always be guaranteed, stable matchings do not always exist in this scenario.
+
+**Q: Do stable matchings always exist?**  
+**A: Not always.**
+
+Unlike the Stable Matching Problem, where a stable matching always exists, the Stable Roommate Problem does not guarantee a stable matching.
 ### Example
 Given four individuals (A, B, C, D) and their ranked preferences, determine whether a stable roommate assignment exists.
 
