@@ -34,6 +34,12 @@ Given three men **(Alex, Bob, David)** and three women **(Emily, Megan, Grace)**
 </p>
 
 **Q.** Is assignment **Alex-Emily**, **Bob-Megan** and **David-Grace** stable?
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Mens_Pref_List_003.jpg" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Womens_Pref_List_003.jpg" width=45%, height=50%/>
+</p>
+
+**A.** Yes, they are stable.
 
 ## Gale-Shapley Algorithm
 The **Gale-Shapley Algorithm** (also called the "Propose-and-Reject" algorithm) is a method to find a stable matching.
