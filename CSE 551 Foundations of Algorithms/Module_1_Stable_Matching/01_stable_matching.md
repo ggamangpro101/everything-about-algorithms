@@ -13,22 +13,22 @@ The **Stable Matching Problem** is defined as:
 - **Output:** A stable matching, if one exists.
 
 ### Example
-Let’s say there are 3 men (\(A, B, C\)) and 3 women (\(X, Y, Z\)), and their preferences are:
+There are 3 men (Alex, Bob, David) and 3 women (Emily, Megan, Grace), and their preferences are:  
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Mens_Pref_List.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Womens_Pref_List.png" width=45%, height=50%/>
+</p>
 
-- **Men's Preferences:**
-  - \(A: [X, Y, Z]\)
-  - \(B: [Y, X, Z]\)
-  - \(C: [Z, X, Y]\)
-
-- **Women's Preferences:**
-  - \(X: [B, A, C]\)
-  - \(Y: [A, C, B]\)
-  - \(Z: [C, B, A]\)
-
-A possible **stable matching**:
-- \(A-Y, B-X, C-Z\)
-
-This pairing is stable because no man and woman prefer each other over their assigned partners.
+Q. Is assignment **Alex-Grace**, **Bob-Megan** and **David-Eemily** stable?
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Mens_Pref_List_001.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Womens_Pref_List_001.png" width=45%, height=50%/>
+</p>
+A. No, because Alex and Megan will hook up.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Mens_Pref_List_002.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Womens_Pref_List_002.png" width=45%, height=50%/>
+</p>
 
 ## Gale-Shapley Algorithm
 The **Gale-Shapley Algorithm** (also called the "Propose-and-Reject" algorithm) is a method to find a stable matching.
