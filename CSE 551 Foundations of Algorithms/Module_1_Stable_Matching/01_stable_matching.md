@@ -332,25 +332,25 @@ Since the assumption of instability leads to contradictions in all cases, it pro
 ### Summary
 - **Stable Matching Problem**: The task is to find a stable matching between two groups of size n, ensuring no unstable 
   pairs exist.
-- **Gale-Shapley Algorithm**: Guarantees to find a stable matching for any instance of the problem.
+- **Gale-Shapley Algorithm**: Guarantees to find a stable matching for any instance of the problem in **O(n²)** time.
 - **Questions**:  
-     **Q.** How can the Gale-Shapley algorithm be implemented efficiently in terms of computation?
-       **A.** The Gale-Shapley algorithm can be implemented efficiently in O(n²) time complexity, where n is the number of           men (or women).  
-       The efficiency comes from the fact that:
-Each man proposes to each woman at most once (leading to at most n² proposals).
-Each woman processes proposals in constant time (accepting, rejecting, or switching partners).
-A straightforward implementation uses:
-Arrays to track pairings.
-Preference lists for constant-time lookups.
-A queue or stack to manage free men.
-With better data structures (e.g., binary heaps for priority-based selection), certain variations can achieve even better efficiency in some cases. 
-     **Q.** If multiple stable matchings exist, which one does the algorithm produce?
-       **A.** The Gale-Shapley algorithm is **"man-optimal"** when men propose and "woman-optimal" when women propose.
-          - This means:
-               - If men propose, each man gets the best possible stable partner for him, while each woman gets the worst                     possible stable partner among all stable matchings.
-               - If women propose, the reverse happens: women get their best possible stable partner, and men get their 
-                 worst stable match.
-               - In cases where multiple stable matchings exist, the algorithm always favors the proposing group while                       ensuring stability.
+     **Q.** How can the Gale-Shapley algorithm be implemented efficiently in terms of computation?  
+       
+     **Q.** If multiple stable matchings exist, which one does the algorithm produce?  
+
+### Efficient Implementation of Gale-Shapley Algorithm
+- **Representation**: Men and women are indexed from 1 to n.
+- **Engagement Tracking**:
+     - Maintain a list of free men (queue or stack can be used).
+     - Use arrays (wife[m] and husband[w]) to track who is engaged to whom. If a person is unmatched, the entry is 0.
+- **Proposal Management**:
+     - Each man has a list of women ranked by preference.
+     - Use an array (count[m]) to track the number of proposals a man has made.
+- **Efficiency Insight**: The naive implementation can lead to **O(n³)** complexity, but using structured data, we achieve 
+  **O(n²)**
+
+### Women Rejecting/Accepting
+
 ### Python Example:
 ```python
 def gale_shapley(men_prefs, women_prefs):
