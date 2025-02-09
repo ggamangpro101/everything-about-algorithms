@@ -96,7 +96,7 @@ while (some man is free and has not prposed to every woman) {
 }
 ```
 ### Gale-Shapley Algorithm
-The **Gale-Shapley Algorithm** (also called the "Propose-and-Reject" algorithm) is a method to find a stable matching.
+The **Gale-Shapley Algorithm** (also called the "Propose-and-Reject" algorithm) is a method to find a stable matching. This method is still widely used today to **assign residents to hospitals**, highlighting its effectiveness and practicality as a solution.
 
 ### How It Works:
 1. Start with all participants unmatched.
@@ -106,17 +106,183 @@ The **Gale-Shapley Algorithm** (also called the "Propose-and-Reject" algorithm) 
    - If the woman is matched but prefers the new proposer over her current partner, she switches to the new proposer.
    - Otherwise, she rejects the proposal.
 3. Repeat until everyone is matched.
+
 ### Example
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_001.png" width=45%, height=50%/>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_001.png" width=45%, height=50%/>
 </p>
 
-- **Alex propses to Bella**
+- **Alex** propses to **Bella**.
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_002.png" width=45%, height=50%/>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_002.png" width=45%, height=50%/>  
 </p>
+
+- **Bella** accepts **Alex** because she was not previously matched.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_003.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_003.png" width=45%, height=50%/>  
+</p>
+
+- **Bob** propses to **Diana**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_004.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_004.png" width=45%, height=50%/>  
+</p>
+
+- **Diana** accepts **Bob** because she was not previously matched.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_005.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_005.png" width=45%, height=50%/>  
+</p>
+
+- **Chris** propses to **Bella**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_006.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_006.png" width=45%, height=50%/>  
+</p>
+
+- **Bella** rejects **Alex** and accepts **Chris**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_007.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_007.png" width=45%, height=50%/>  
+</p>
+
+- **Alex** propses to **Amy**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_008.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_008.png" width=45%, height=50%/>  
+</p>
+
+- **Amy** accepts **Alex** because she was not previously matched.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_009.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_009.png" width=45%, height=50%/>  
+</p>
+
+- **David** propses to **Amy**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_010.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_010.png" width=45%, height=50%/>  
+</p>
+
+- **Amy** rejects **David** because she prefers **Alex**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_011.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_011.png" width=45%, height=50%/>  
+</p>
+
+- **David** propses to **Diana**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_012.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_012.png" width=45%, height=50%/>  
+</p>
+
+- **Diana** rejects **Bob** and accepts **David**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_013.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_013.png" width=45%, height=50%/>  
+</p>
+
+- **Bob** propses to **Bella**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_014.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_014.png" width=45%, height=50%/>  
+</p>
+
+- **Bella** rejects **Bob** because she prefers **Chris**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_015.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_015.png" width=45%, height=50%/>  
+</p>
+
+- **Bob** propses to **Amy**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_016.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_016.png" width=45%, height=50%/>  
+</p>
+
+- **Amy** rejects **Bob** because she prefers **Alex**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_017.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_017.png" width=45%, height=50%/>  
+</p>
+
+- **Bob** propses to **Caitlin**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_018.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_018.png" width=45%, height=50%/>  
+</p>
+
+- **Caitlin** accepts **Bob** because she was not previously matched.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_019.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_019.png" width=45%, height=50%/>  
+</p>
+
+- **Eric** propses to **Bella**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_020.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_020.png" width=45%, height=50%/>  
+</p>
+
+- **Bella** rejects **Eric** because she prefers **Chris**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_021.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_021.png" width=45%, height=50%/>  
+</p>
+
+- **Eric** propses to **Diana**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_022.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_022.png" width=45%, height=50%/>  
+</p>
+
+- **Diana** rejects **David** because she prefers **Eric**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_023.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_023.png" width=45%, height=50%/>  
+</p>
+
+- **David** propses to **Caitlin**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_024.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_024.png" width=45%, height=50%/>  
+</p>
+
+- **Caitlin** rejects **David** because she prefers **Bob**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_025.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_025.png" width=45%, height=50%/>  
+</p>
+
+- **David** propses to **Bella**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_026.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_026.png" width=45%, height=50%/>  
+</p>
+
+- **Bella** rejects **David** because she prefers **Chris**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_027.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_027.png" width=45%, height=50%/>  
+</p>
+
+- **David** propses to **Emily**.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_028.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_028.png" width=45%, height=50%/>  
+</p>
+
+- **Emily** accepts **David** because she was not previously matched.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_029.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_029.png" width=45%, height=50%/>  
+</p>
+
+- Now, everyone is matched, and the result is a stable matching.
+
 
 ### Python Example:
 ```python
