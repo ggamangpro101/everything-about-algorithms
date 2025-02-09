@@ -283,7 +283,74 @@ The **Gale-Shapley Algorithm** (also called the "Propose-and-Reject" algorithm) 
 
 - Now, **everyone is matched**, and the result is a **stable matching**.
 
+### Proof of Correctness: Termination
+- **Observation 1**: Men propose to women in decreasing order of their preference lists. This ensures that men systematically move through their preferences without skipping anyone.
+- **Observation 2**: Once a woman is matched, she never becomes unmatched but may "trade up" to a more preferred proposer. This guarantees progress toward stability.
+- **Claim**: The algorithm terminates after at most **n²** iterations of the while loop.
+- **Proof**: Each man proposes to a new woman each time, and there are at most **n²** possible proposals (**n men × n           women**).
+     - This ensures the algorithm is efficient and terminates in finite time.
 
+### Proof of Correctness: Perfection
+- **Claim**: All men and women get matched.
+- **Proof (by contradiction)**:
+     - **Assume a man, say Eric, is unmatched at the end of the algorithm.**
+          - This is the opposite of the claim (that everyone is matched).
+          - If Eric is unmatched, it means the algorithm couldn't find a partner for him.
+     - **If Eric is unmatched, then some woman, say Amy, must also be unmatched.**
+          - The algorithm pairs each man with one woman, so if Zeus is unmatched, there must be an unmatched woman as well.
+     - **Observation 2: Amy was never proposed to during the process.**
+          - If **Amy** is **unmatched**, it means no man ever proposed to her, because if she had been proposed to, she                 would have accepted the best proposal.
+     - **However, Eric, being unmatched, would have proposed to all women, including Amy.**
+          - Eric would have worked his way down his entire preference list, proposing to every woman, because the algorithm             requires men to propose to every woman until they are matched or until no women are left to propose to.
+          - This means Eric must have proposed to Amy at some point.
+     - **Contradiction**:
+          - If Eric proposed to Amy, she should not be unmatched because she would have accepted him if she had no other                proposals.
+          - This contradicts the earlier assumption that Amy is unmatched.
+
+### Proof of Correctness: Stability
+- **Claim**: No unstable pairs exist in the final matching.
+     - An unstable pair exists if two individuals (let's call them Amy and Eric) both prefer each other over their assigned        partners. The proof aims to show that no such pair can exist.
+- **Proof (by contradiction)**:
+     - **Assume there is an unstable pair, Amy and Eric.**
+          - Both Amy and Eric prefer each other over their current partners in the matching.
+          - This violates the stability condition, so we proceed to check the possible scenarios.
+     - **Case 1: Eric never proposed to Amy.**
+          - If Eric never proposed to Amy, it means that Eric must have preferred his current partner over Amy.
+          - This is because men propose in decreasing order of preference, so if Eric skipped Amy, it was intentional.
+          - This directly contradicts the assumption that Eric prefers Amy over his current partner.
+          - Therefore, the pair Amy and Eric cannot be unstable in this case.
+     - **Case 2: Eric proposed to Amy.**
+          - If Eric did propose to Amy, Amy must have rejected Eric either immediately or later in favor of a better match.
+          - The Gale-Shapley algorithm ensures that once a woman is matched, she only "trades up" (moves to a partner she               prefers more).
+          - This means Amy prefers her current partner over Eric.
+          - This also contradicts the assumption that Amy prefers Eric over her current partner.
+     - In both scenarios, the pair Amy and Eric is not unstable.
+     - This disproves the assumption that an unstable pair exists in the final matching.
+  
+Since the assumption of instability leads to contradictions in all cases, it proves that **no unstable pairs exist**. Therefore, the **Gale-Shapley algorithm guarantees a stable matching** where all pairs follow the stability rules.
+
+### Summary
+- **Stable Matching Problem**: The task is to find a stable matching between two groups of size n, ensuring no unstable 
+  pairs exist.
+- **Gale-Shapley Algorithm**: Guarantees to find a stable matching for any instance of the problem.
+- **Questions**:  
+     **Q.** How can the Gale-Shapley algorithm be implemented efficiently in terms of computation?
+       **A.** The Gale-Shapley algorithm can be implemented efficiently in O(n²) time complexity, where n is the number of           men (or women).  
+       The efficiency comes from the fact that:
+Each man proposes to each woman at most once (leading to at most n² proposals).
+Each woman processes proposals in constant time (accepting, rejecting, or switching partners).
+A straightforward implementation uses:
+Arrays to track pairings.
+Preference lists for constant-time lookups.
+A queue or stack to manage free men.
+With better data structures (e.g., binary heaps for priority-based selection), certain variations can achieve even better efficiency in some cases. 
+     **Q.** If multiple stable matchings exist, which one does the algorithm produce?
+       **A.** The Gale-Shapley algorithm is **"man-optimal"** when men propose and "woman-optimal" when women propose.
+          - This means:
+               - If men propose, each man gets the best possible stable partner for him, while each woman gets the worst                     possible stable partner among all stable matchings.
+               - If women propose, the reverse happens: women get their best possible stable partner, and men get their 
+                 worst stable match.
+               - In cases where multiple stable matchings exist, the algorithm always favors the proposing group while                       ensuring stability.
 ### Python Example:
 ```python
 def gale_shapley(men_prefs, women_prefs):
