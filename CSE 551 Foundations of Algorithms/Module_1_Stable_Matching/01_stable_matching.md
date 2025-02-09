@@ -281,7 +281,7 @@ The **Gale-Shapley Algorithm** (also called the "Propose-and-Reject" algorithm) 
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_029.png" width=45%, height=50%/>  
 </p>
 
-- Now, everyone is matched, and the result is a stable matching.
+- Now, **everyone is matched**, and the result is a **stable matching**.
 
 
 ### Python Example:
