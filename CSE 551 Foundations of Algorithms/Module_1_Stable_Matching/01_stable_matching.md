@@ -80,8 +80,22 @@ Every possible pairing leads to instability, meaning no stable matching exists f
 Stable matchings **do not always exist** for the **Stable Roommate Problem**.
 Unlike the Stable Matching Problem, the inherent preferences in the roommate setup can create situations where stability is impossible, as shown in the example.
 
-
-## Gale-Shapley Algorithm
+## Propose and Reject Algorithm (Gale-Shapley)
+The **Propose-and-Reject Algorithm (Gale-Shapley, 1962)** is a simple and logical method designed to ensure a stable matching between two groups.
+```python
+Initialize each person to be free.
+while (some man is free and has not prposed to every woman) {
+     Choose such a man m
+     w = 1st woman on m's list to whom m has not yet proposed
+     if (w is free)
+        assign m and w to be engaged
+     else if (w prefers m to her fiancé m')
+        assign m and w to be engaged, and m' to be free
+     else
+        w rejects m
+}
+```
+### Gale-Shapley Algorithm
 The **Gale-Shapley Algorithm** (also called the "Propose-and-Reject" algorithm) is a method to find a stable matching.
 
 ### How It Works:
@@ -92,6 +106,17 @@ The **Gale-Shapley Algorithm** (also called the "Propose-and-Reject" algorithm) 
    - If the woman is matched but prefers the new proposer over her current partner, she switches to the new proposer.
    - Otherwise, she rejects the proposal.
 3. Repeat until everyone is matched.
+### Example
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_001.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_001.png" width=45%, height=50%/>
+</p>
+
+- **Alex propses to Bella**
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_002.png" width=45%, height=50%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_002.png" width=45%, height=50%/>  
+</p>
 
 ### Python Example:
 ```python
