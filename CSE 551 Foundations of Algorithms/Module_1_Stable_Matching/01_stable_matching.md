@@ -353,8 +353,8 @@ Since the assumption of instability leads to contradictions in all cases, it pro
      - **Optimization**:
           - Precompute an "inverse preference list" for each woman, mapping each man to his rank in her list. This allows constant-time checks during comparisons.
      - **Example**:
-          - A preference list for Amy is given, and its inverse is shown. Using this, we see that Amy prefers Man 3 over Man 6 because inverse[3]<inverse[6].
-<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/png/Amy_Pref_Inverse.png" />
+          - A preference list for Amy is given, and its inverse is shown. Using this, we see that Amy prefers Man 3 over Man 6 because inverse[3]<inverse[6].  
+           <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Amy_Pref_Inverse.png" height=70%, width=70%/>
 
 
 ### Python Example:
