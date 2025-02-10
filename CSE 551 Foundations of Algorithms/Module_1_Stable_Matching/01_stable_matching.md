@@ -372,8 +372,11 @@ for i = 1 to n
 - There can be multiple stable matchings.  
 - Example instance: Two stable matchings are shown where pairs differ slightly.  
 <p align=center>
-<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Multiple_Stable_Matching_001.png" height=45%, width=45%/>
-<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Multiple_Stable_Matching_002.png" height=45%, width=45%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Multiple_Stable_Matching_003.png" height=45%, width=45%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Multiple_Stable_Matching_004.png" height=45%, width=45%/>
+
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Multiple_Stable_Matching_005.png" height=45%, width=45%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Multiple_Stable_Matching_006.png" height=45%, width=45%/>
 </p>
 
 **Key Insight:** Gale-Shapley finds the man-optimal stable matching when men propose.
