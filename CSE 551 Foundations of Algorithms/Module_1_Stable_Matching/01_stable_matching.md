@@ -40,7 +40,7 @@ Given three men **(Alex, Bob, David)** and three women **(Emily, Megan, Grace)**
 **A:** Yes, they are stable.
 
 ## Stable Roomate Problem
-**Stable Roommate Problem** is a variation of the Stable Matching Problem, where 2n individuals need to be paired into roommate pairs. Unlike the Stable Matching Problem, where stability can always be guaranteed, stable matchings do not always exist in this scenario.
+**Stable Roommate Problem** is a variation of the Stable Matching Problem, where **2n** individuals need to be paired into roommate pairs. Unlike the Stable Matching Problem, where stability can always be guaranteed, stable matchings do not always exist in this scenario.
 
 **Q: Do stable matchings always exist?**  
 **A: Not always.**
@@ -384,12 +384,27 @@ for i = 1 to n
 ### Understanding Man-Optimality
 **Definition:**  
 - A man’s valid partner is any woman he could be stably matched with in some stable matching.
-- A man-optimal assignment ensures each man gets his most preferred valid partner.
+- A man-optimal assignment ensures **each man gets his most preferred valid partner**.
 
 **Claim:**
-- Gale-Shapley always yields the man-optimal stable matching.
+- Gale-Shapley always yields the **man-optimal stable matching**.
+
+**Proof by Contradiction:**
+- Assume a man is matched to someone other than his best valid partner.
+- Through logical steps, it is shown that any deviation results in instability, disproving the initial assumption.
+
 **Key Points:**
 - The man-optimal stable matching is simultaneously the **best outcome for all men** but does not necessarily prioritize women’s preferences.
+
+### Woman Pessimality
+**Woman-Pessimal Assignment:**
+- In a man-optimal stable matching, each woman receives her worst valid partner.
+
+**Claim:**
+- Gale-Shapley produces the woman-pessimal stable matching when men propose.
+
+**Proof:**
+- A contradiction is used to show that if a woman could improve her match, the assignment would no longer be stable.
 
 ### Python Example:
 ```python
@@ -433,9 +448,67 @@ women_preferences = {
 result = gale_shapley(men_preferences, women_preferences)
 print("Stable Matching:", result)
 ```
+### Stable Matching Summary
+**Stable Matching Problem**
+- The stable matching problem involves finding a pairing between two groups of size n (e.g., men and women) based on          their preference profiles.
 
-## Matching Residents to Hospitals
+- **A stable matching ensures:**
+     - No pair (man and woman) would rather be with each other than with their assigned partners.
+     - In other words, there are no unstable pairs, which are pairs who prefer each other over their assigned partners.
 
+**Key takeaway:** Stability avoids disruptions in the pairing, ensuring that no participants have an incentive to leave their current match.
+
+**Gale-Shapley Algorithm**
+- This algorithm is a systematic way to solve the stable matching problem.
+
+- **Time Complexity: O(n²)**
+     - It is efficient because it uses structured steps to guarantee a stable matching in a reasonable amount of                   computational time.
+
+- **How It Works:**
+     - Men (or one group) propose to women (or the other group) in order of their preferences.
+     - Women either accept or reject proposals based on their own preferences, possibly "trading up" over time.
+
+**Key takeaway:** The algorithm ensures that every participant is matched in a stable way.
+
+**Man-Optimality**
+- The man-optimality property of the Gale-Shapley algorithm means:
+     - When men propose, each man gets the best possible partner they could have in any stable matching.
+     - This happens because the algorithm allows men to propose in their preferred order, maximizing their outcomes.
+
+- **Valid Partner Definition:**  
+     - A valid partner for a man is a woman with whom he could be paired in at least one stable matching.
+     - For example, if a man could be paired with a woman w in a stable matching, she is a valid partner for him.
+
+**Key takeaway:** The Gale-Shapley algorithm ensures that **men get the best outcome** they can, among all stable matchings.
+
+**Question: Does Man-Optimality Come at the Expense of Women?**
+- The man-optimality property often leads to woman-pessimality, where women get their least favorable stable match.
+     - While all matches are stable, the outcome tends to favor the proposing group (in this case, men).
+     - This raises questions of fairness, as women may not receive their preferred matches even if alternative stable              matchings exist.
+
+**Key takeaway:** The Gale-Shapley algorithm inherently favors the proposing side, which could create imbalances in preferences between the two groups.
+
+### Extension: Matching Residents to Hospitals
+- **Goal:**  
+     - Design a matching system where preferences of hospitals and residents are respected, ensuring stability.
+
+- **Definitions:**
+     - An unstable pair occurs if a resident and hospital prefer each other over their current matches.
+     - A stable assignment has no unstable pairs.
+
+- **Significance:** Stability ensures that no participant has an incentive to deviate from the assignment.
+
+- **Scenarios:**
+     - Variant 1: Some participants may declare others as unacceptable.
+     - Variant 2: There may be unequal numbers of residents and hospitals.
+     - Variant 3: Hospitals may accept multiple residents (limited polygamy).
+
+-  **Definition of Instability:**
+     - A matching is unstable if a hospital-resident pair prefers each other over their assigned matches, or if a hospital         has unfilled slots but prefers a different resident over one of its current assignees.
+
+## Five Representative Problems
+
+### Interval Scehduling
 
 **1. Termination:**
 The algorithm always terminates because men propose in decreasing order of preference, and there are a finite number of proposals (n^2, where n is the number of participants).
