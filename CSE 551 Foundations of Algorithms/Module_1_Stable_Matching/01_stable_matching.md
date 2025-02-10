@@ -19,25 +19,25 @@ Given three men **(Alex, Bob, David)** and three women **(Emily, Megan, Grace)**
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Womens_Pref_List_001.png" width=45%, height=45%/>
 </p>
 
-**Q.** Is assignment **Alex-Grace**, **Bob-Megan** and **David-Eemily** stable?
+**Q:** Is assignment **Alex-Grace**, **Bob-Megan** and **David-Eemily** stable?
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Mens_Pref_List_002.png" width=45%, height=45%/>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Womens_Pref_List_002.png" width=45%, height=45%/>
 </p>
 
-**A.** No, because Alex and Megan will hook up.
+**A:** No, because Alex and Megan will hook up.
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Mens_Pref_List_003.png" width=45%, height=45%/>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Womens_Pref_List_003.png" width=45%, height=45%/>
 </p>
 
-**Q.** Is assignment **Alex-Emily**, **Bob-Megan** and **David-Grace** stable?
+**Q:** Is assignment **Alex-Emily**, **Bob-Megan** and **David-Grace** stable?
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Mens_Pref_List_004.png" width=45%, height=45%/>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Womens_Pref_List_004.png" width=45%, height=45%/>
 </p>
 
-**A.** Yes, they are stable.
+**A:** Yes, they are stable.
 
 ## Stable Roomate Problem
 **Stable Roommate Problem** is a variation of the Stable Matching Problem, where 2n individuals need to be paired into roommate pairs. Unlike the Stable Matching Problem, where stability can always be guaranteed, stable matchings do not always exist in this scenario.
@@ -334,9 +334,9 @@ Since the assumption of instability leads to contradictions in all cases, it pro
   pairs exist.
 - **Gale-Shapley Algorithm**: Guarantees to find a stable matching for any instance of the problem in **O(n²)** time.
 - **Questions**:  
-     **Q.** How can the Gale-Shapley algorithm be implemented efficiently in terms of computation?  
+     **Q:** How can the Gale-Shapley algorithm be implemented efficiently in terms of computation?  
        
-     **Q.** If multiple stable matchings exist, which one does the algorithm produce?  
+     **Q:** If multiple stable matchings exist, which one does the algorithm produce?  
 
 ### Efficient Implementation of Gale-Shapley Algorithm
 - **Representation**: Men and women are indexed from 1 to n.
@@ -353,9 +353,26 @@ Since the assumption of instability leads to contradictions in all cases, it pro
      - **Optimization**:
           - Precompute an "inverse preference list" for each woman, mapping each man to his rank in her list. This allows constant-time checks during comparisons.
      - **Example**:
-          - A preference list for Amy is given, and its inverse is shown. Using this, we see that Amy prefers Man 3 over Man 6 because inverse[3]<inverse[6].  
-           <img src="" height=70%, width=70%/>
+          - A preference list for Amy is given, and its inverse is shown. Using this, we see that Amy prefers **Man 3** over **Man 6** because inverse[3]<inverse[6].  
+          - Using the **preference list**: You'd need to find 3 and 6 in the list, which takes **O(n)** time.  
+          - Using the **inverse list**: Simply compare inverse[3] and inverse[6] (constant time lookup for both).      
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Amy_Pref_Inverse.png" height=70%, width=70%/>
+</p>
 
+```python
+for i = 1 to n
+   inverse[pref[i]] = i
+```
+
+### Understanding the solution(Multiple Stable Matchings)
+**Q:** Does Gale-Shapley always produce the same stable matching, and if not, which one does it find?  
+
+**Observation:**  
+- There can be multiple stable matchings.  
+- Example instance: Two stable matchings are shown where pairs differ slightly.  
+
+**Key Insight:** Gale-Shapley finds the man-optimal stable matching when men propose.
 
 ### Python Example:
 ```python
