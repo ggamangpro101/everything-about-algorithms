@@ -381,6 +381,16 @@ for i = 1 to n
 
 **Key Insight:** Gale-Shapley finds the man-optimal stable matching when men propose.
 
+### Understanding Man-Optimality
+**Definition:**  
+- A man’s valid partner is any woman he could be stably matched with in some stable matching.
+- A man-optimal assignment ensures each man gets his most preferred valid partner.
+
+**Claim:**
+- Gale-Shapley always yields the man-optimal stable matching.
+**Key Points:**
+- The man-optimal stable matching is simultaneously the **best outcome for all men** but does not necessarily prioritize women’s preferences.
+
 ### Python Example:
 ```python
 def gale_shapley(men_prefs, women_prefs):
@@ -423,6 +433,9 @@ women_preferences = {
 result = gale_shapley(men_preferences, women_preferences)
 print("Stable Matching:", result)
 ```
+
+## Matching Residents to Hospitals
+
 
 **1. Termination:**
 The algorithm always terminates because men propose in decreasing order of preference, and there are a finite number of proposals (n^2, where n is the number of participants).
