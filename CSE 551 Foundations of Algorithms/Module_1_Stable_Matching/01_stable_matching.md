@@ -326,7 +326,16 @@ The **Gale-Shapley Algorithm** (also called the "Propose-and-Reject" algorithm) 
           - This also contradicts the assumption that Amy prefers Eric over her current partner.
      - In both scenarios, the pair Amy and Eric is not unstable.
      - This disproves the assumption that an unstable pair exists in the final matching.
-  
+
+**1. Termination:**
+The algorithm always terminates because men propose in decreasing order of preference, and there are a finite number of proposals (n^2, where n is the number of participants).
+
+**2. Perfect Matching:**
+Every participant is eventually matched because proposals continue until all participants are paired.
+
+**3. Stability:**
+No unstable pairs exist because a woman only trades up during the algorithm, and a man cannot pair with a woman who has rejected him.
+
 Since the assumption of instability leads to contradictions in all cases, it proves that **no unstable pairs exist**. Therefore, the **Gale-Shapley algorithm guarantees a stable matching** where all pairs follow the stability rules.
 
 ### Summary
@@ -526,7 +535,7 @@ Stable matching is a foundational problem in algorithms, demonstrating how prefe
      - Note: Some intervals, like C, are not included because they overlap with better options like B.
 
 <p align=center>
-<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Multiple_Stable_Matching_003.png" height=45%, width=45%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Interval_Scheduling.png" height=45%, width=45%/>
 </p>
 
 ### Weighted Interval Scheduling
@@ -538,7 +547,7 @@ Stable matching is a foundational problem in algorithms, demonstrating how prefe
      - This involves dynamic programming techniques to compare cumulative weights efficiently.
 
 <p align=center>
-<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Multiple_Stable_Matching_003.png" height=45%, width=45%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Weighted_Interval_Scheduling.png" height=45%, width=45%/>
 </p>
 
 ### Bipartite Matching
@@ -550,7 +559,7 @@ Stable matching is a foundational problem in algorithms, demonstrating how prefe
      - Algorithms like max-flow can solve this efficiently for large graphs.
 
 <p align=center>
-<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Multiple_Stable_Matching_003.png" height=45%, width=45%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Bipartite_Matching.png" height=45%, width=45%/>
 </p>
 
 ### Independent Set
@@ -575,17 +584,8 @@ Stable matching is a foundational problem in algorithms, demonstrating how prefe
        player’s moves.
 
 <p align=center>
-<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Multiple_Stable_Matching_003.png" height=45%, width=45%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Competitive_Facility_Location.png" height=45%, width=45%/>
 </p>
-
-**1. Termination:**
-The algorithm always terminates because men propose in decreasing order of preference, and there are a finite number of proposals (n^2, where n is the number of participants).
-
-**2. Perfect Matching:**
-Every participant is eventually matched because proposals continue until all participants are paired.
-
-**3. Stability:**
-No unstable pairs exist because a woman only trades up during the algorithm, and a man cannot pair with a woman who has rejected him.
 
 ### Five Representative Problems Summary
 - Variations on Independent Set:
