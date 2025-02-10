@@ -287,7 +287,7 @@ The **Gale-Shapley Algorithm** (also called the "Propose-and-Reject" algorithm) 
 - **Observation 1**: Men propose to women in decreasing order of their preference lists. This ensures that men systematically move through their preferences without skipping anyone.
 - **Observation 2**: Once a woman is matched, she never becomes unmatched but may "trade up" to a more preferred proposer. This guarantees progress toward stability.
 - **Claim**: The algorithm terminates after at most **n²** iterations of the while loop.
-- **Proof**: Each man proposes to a new woman each time, and there are at most **n²** possible proposals (**n men × n           women**).
+- **Proof**: Each man proposes to a new woman each time, and there are at most **n²** possible proposals (**n men × n women**).
      - This ensures the algorithm is efficient and terminates in finite time.
 
 ### Proof of Correctness: Perfection
@@ -354,7 +354,7 @@ Since the assumption of instability leads to contradictions in all cases, it pro
           - Precompute an "inverse preference list" for each woman, mapping each man to his rank in her list. This allows constant-time checks during comparisons.
      - **Example**:
           - A preference list for Amy is given, and its inverse is shown. Using this, we see that Amy prefers Man 3 over Man 6 because inverse[3]<inverse[6].  
-           <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Amy_Pref_Inverse.png" height=70%, width=70%/>
+           <img src="" height=70%, width=70%/>
 
 
 ### Python Example:
