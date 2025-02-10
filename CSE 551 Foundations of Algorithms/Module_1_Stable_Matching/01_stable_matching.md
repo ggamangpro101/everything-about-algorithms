@@ -448,6 +448,25 @@ women_preferences = {
 result = gale_shapley(men_preferences, women_preferences)
 print("Stable Matching:", result)
 ```
+
+### Extension: Matching Residents to Hospitals
+- **Goal:**  
+     - Design a matching system where preferences of hospitals and residents are respected, ensuring stability.
+
+- **Definitions:**
+     - An unstable pair occurs if a resident and hospital prefer each other over their current matches.
+     - A stable assignment has no unstable pairs.
+
+- **Significance:** Stability ensures that no participant has an incentive to deviate from the assignment.
+
+- **Scenarios:**
+     - Variant 1: Some participants may declare others as unacceptable.
+     - Variant 2: There may be unequal numbers of residents and hospitals.
+     - Variant 3: Hospitals may accept multiple residents (limited polygamy).
+
+-  **Definition of Instability:**
+     - A matching is unstable if a hospital-resident pair prefers each other over their assigned matches, or if a hospital         has unfilled slots but prefers a different resident over one of its current assignees.
+
 ### Stable Matching Summary
 **Stable Matching Problem**
 - The stable matching problem involves finding a pairing between two groups of size n (e.g., men and women) based on          their preference profiles.
@@ -481,6 +500,13 @@ print("Stable Matching:", result)
 
 **Key takeaway:** The Gale-Shapley algorithm ensures that **men get the best outcome** they can, among all stable matchings.
 
+**Applications**
+Stable matching has many real-world applications:
+
+- **Resident-Hospital Matching:** Assigning medical residents to hospitals.
+- **College Admissions:** Matching students to universities based on preferences.
+- **Job Recruitment:** Matching candidates to jobs or companies.
+
 **Question: Does Man-Optimality Come at the Expense of Women?**
 - The man-optimality property often leads to woman-pessimality, where women get their least favorable stable match.
      - While all matches are stable, the outcome tends to favor the proposing group (in this case, men).
@@ -488,27 +514,69 @@ print("Stable Matching:", result)
 
 **Key takeaway:** The Gale-Shapley algorithm inherently favors the proposing side, which could create imbalances in preferences between the two groups.
 
-### Extension: Matching Residents to Hospitals
-- **Goal:**  
-     - Design a matching system where preferences of hospitals and residents are respected, ensuring stability.
-
-- **Definitions:**
-     - An unstable pair occurs if a resident and hospital prefer each other over their current matches.
-     - A stable assignment has no unstable pairs.
-
-- **Significance:** Stability ensures that no participant has an incentive to deviate from the assignment.
-
-- **Scenarios:**
-     - Variant 1: Some participants may declare others as unacceptable.
-     - Variant 2: There may be unequal numbers of residents and hospitals.
-     - Variant 3: Hospitals may accept multiple residents (limited polygamy).
-
--  **Definition of Instability:**
-     - A matching is unstable if a hospital-resident pair prefers each other over their assigned matches, or if a hospital         has unfilled slots but prefers a different resident over one of its current assignees.
+Stable matching is a foundational problem in algorithms, demonstrating how preferences and fairness can be balanced in a mathematically sound way.
 
 ## Five Representative Problems
 
 ### Interval Scehduling
+- **Input:** A set of jobs with specified start and finish times.
+- **Goal:** Identify the maximum number of mutually compatible jobs (those that do not overlap in time).
+- **Explanation:** The problem aims to maximize the number of non-overlapping intervals. For example:
+     - Jobs B, E, and H are selected as the optimal subset since they do not overlap with each other.
+     - Note: Some intervals, like C, are not included because they overlap with better options like B.
+
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Multiple_Stable_Matching_003.png" height=45%, width=45%/>
+</p>
+
+### Weighted Interval Scheduling
+- **Input:** A set of jobs with start times, finish times, and associated weights (or values).
+- **Goal:** Maximize the total weight of selected mutually compatible jobs.
+- **Explanation:**
+     - Unlike interval scheduling, this focuses on maximizing the cumulative weight instead of the number of intervals.
+     - For example, intervals with weights **26** and **16** are chosen as they yield the highest total value without              overlap.
+     - This involves dynamic programming techniques to compare cumulative weights efficiently.
+
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Multiple_Stable_Matching_003.png" height=45%, width=45%/>
+</p>
+
+### Bipartite Matching
+- **Input:** A bipartite graph (two disjoint sets of nodes with edges only between sets).
+- **Goal:** Find the maximum cardinality matching, where the largest number of nodes are paired without overlap.
+- **Explanation:**
+     - A matching means that no two edges share a node.
+     - Example: Nodes A-1, C-3, and D-4 form one possible maximum matching.
+     - Algorithms like max-flow can solve this efficiently for large graphs.
+
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Multiple_Stable_Matching_003.png" height=45%, width=45%/>
+</p>
+
+### Independent Set
+- **Input:** A graph with nodes and edges.
+- **Goal:** Find the largest subset of nodes such that no two selected nodes are connected by an edge.
+- **Explanation:**
+     - This is a classic graph theory problem to ensure independence among selected nodes.
+     - Example: Nodes 1, 3, 4, and 7 form a maximum independent set in the graph.
+     - This problem is computationally hard (NP-complete), meaning it’s challenging to solve optimally for large graphs.
+
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Multiple_Stable_Matching_003.png" height=45%, width=45%/>
+</p>
+
+### Competitive Facility Location
+- **Input:** A graph with weights assigned to nodes.
+- **Game:** Two players alternate selecting nodes. A node cannot be selected if one of its neighbors has already been                   chosen.
+- **Goal:** Maximize the total weight of selected nodes while adhering to the rules.
+- **Explanation:**
+     - This is a combinatorial game problem where strategy matters.
+     - For example, the second player can ensure a score of 20 but cannot guarantee 25 due to constraints from the first 
+       player’s moves.
+
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Multiple_Stable_Matching_003.png" height=45%, width=45%/>
+</p>
 
 **1. Termination:**
 The algorithm always terminates because men propose in decreasing order of preference, and there are a finite number of proposals (n^2, where n is the number of participants).
@@ -519,16 +587,10 @@ Every participant is eventually matched because proposals continue until all par
 **3. Stability:**
 No unstable pairs exist because a woman only trades up during the algorithm, and a man cannot pair with a woman who has rejected him.
 
-**Applications**
-Stable matching has many real-world applications:
-
-- **Resident-Hospital Matching:** Assigning medical residents to hospitals.
-- **College Admissions:** Matching students to universities based on preferences.
-- **Job Recruitment:** Matching candidates to jobs or companies.
-
-**Summary**
-- The Gale-Shapley Algorithm guarantees a stable matching in O(n^2) time.
-- The resulting matching is man-optimal: Each man is paired with the best possible partner they could achieve in any stable matching.
-- This comes at the expense of woman-pessimality: Each woman is paired with their worst valid partner.
-
-Stable matching is a foundational problem in algorithms, demonstrating how preferences and fairness can be balanced in a mathematically sound way.
+### Five Representative Problems Summary
+- Variations on Independent Set:
+     - **Interval Scheduling:** Solved with a greedy algorithm in O(nlogn) time.
+     - **Weighted Interval Scheduling:** Solved using dynamic programming in O(nlogn) time.
+     - **Bipartite Matching:** Solved with a max-flow-based algorithm in O(n<sup>k</sup>), where k depends on the algorithm.
+     - **Independent Set:** An NP-complete problem, meaning no efficient solution exists for large graphs.
+     - **Competitive Facility Location:** PSPACE-complete, requiring strategies that consider multiple moves ahead.
