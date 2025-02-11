@@ -2,6 +2,35 @@
 
 In Module 1, we will explore **algorithms**, why they matter, and how they help solve problems. We’ll focus on the **Stable Matching Problem**, learning the right algorithmic techniques to solve it and how to evaluate those solutions. You will also get a quick introduction to **five key problems**: **Interval Scheduling**, **Weighted Interval Scheduling**, **Bipartite Matching**, **Independent Set**, and **Competitive Facility Location**.
 
+## Contents
+
+1. [Key Terms](#Key-Terms)
+2. [Stable Matching Problem](#Stable-Matching-Problem)
+   - [SMP Example](#SMP-Example)
+3. [Stable Roomate Problem](#Stable-Roomate-Problem)
+   - [SRP Example](#SRP-Example)
+4. [Propose and Reject Algorithm (Gale-Shapley)](#Propose-and-Reject-Algorithm-(Gale-Shapley))
+   - [Gale-Shapley Algorithm](Gale-Shapley-Algorithm)
+   - [How It Works](How-It-Works:)
+   - [GS Example](GS-Example)
+   - [Proof of Correctness: Termination](Proof-of-Correctness:-Termination)
+   - [Proof of Correctness: Perfection](Proof-of-Correctness:-Perfection)
+   - [Proof of Correctness: Stability](Proof-of-Correctness:-Stability)
+   - [SMP & GS Summary](SMP-&-GS-Summary)
+   - [Efficient Implementation of Gale-Shapley Algorithm](Efficient-Implementation-of-Gale-Shapley-Algorithm)
+   - [Understanding the solution(Multiple Stable Matchings)](Understanding-the-solution(Multiple-Stable-Matchings))
+   - [Understanding Man-Optimality](Understanding-Man-Optimality)
+   - [Woman Pessimality](Woman-Pessimality)
+   - [Python Example](Python-Example)
+   - [Extension: Matching Residents to Hospitals](Extension:-Matching-Residents-to-Hospitals)
+   - [Summary](Summary)
+5. [Five Representative Problems](Five-Representative-Problems)
+   - [Weighted Interval Scheduling](Weighted-Interval-Scheduling)
+   - [Bipartite Matching](Bipartite-Matching)
+   - [Independent Set](Independent-Set)
+   - [Competitive Facility Location](Competitive-Facility-Location)
+   - [Five Representative Problems Summary](Five-Representative-Problems-Summary)
+
 ## Key Terms
 - **Perfect matching** means that everyone is paired up in a one-to-one relationship, with no one left unmatched. Each person has exactly one partner.
 - **Stability** in a matching means that no two people have a reason to abandon their assigned partners for each other. If a pair—let’s call them A and B—both prefer each other over their current matches, they might choose to leave their assigned partners and form a new pair, disrupting the existing arrangement. This situation is called instability.
@@ -12,7 +41,7 @@ In Module 1, we will explore **algorithms**, why they matter, and how they help 
 ## Stable Matching Problem
 The **Stable Matching Problem** involves finding a stable pairing between two equally sized groups, where each member has a ranked preference list. The goal is to ensure that no two individuals would prefer each other over their assigned partners. This concept can be demonstrated through various examples.
 
-### Example
+### SMP Example
 Given three men **(Alex, Bob, David)** and three women **(Emily, Megan, Grace)**, along with their preference lists, determine a **stable matching** where no two individuals prefer each other over their assigned partners.
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Mens_Pref_List_001.png" width=45%, height=45%/>
@@ -46,7 +75,7 @@ Given three men **(Alex, Bob, David)** and three women **(Emily, Megan, Grace)**
 **A: Not always.**
 
 Unlike the Stable Matching Problem, where a stable matching always exists, the Stable Roommate Problem does not guarantee a stable matching.
-### Example
+### SRP Example
 Given four individuals (**Alex, Bob, Chris, David**) and their ranked preferences, determine whether a stable roommate assignment exists.
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Roommate_Pref_List_001.png" width=40%, height=40%/>
@@ -107,7 +136,7 @@ The **Gale-Shapley Algorithm** (also called the "Propose-and-Reject" algorithm) 
    - Otherwise, she rejects the proposal.
 3. Repeat until everyone is matched.
 
-### Example
+### GS Example
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_001.png" width=45%, height=45%/>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_001.png" width=45%, height=45%/>
@@ -338,7 +367,7 @@ No unstable pairs exist because a woman only trades up during the algorithm, and
 
 Since the assumption of instability leads to contradictions in all cases, it proves that **no unstable pairs exist**. Therefore, the **Gale-Shapley algorithm guarantees a stable matching** where all pairs follow the stability rules.
 
-### Summary
+###  SMP & GS Summary
 - **Stable Matching Problem**: The task is to find a stable matching between two groups of size n, ensuring no unstable 
   pairs exist.
 - **Gale-Shapley Algorithm**: Guarantees to find a stable matching for any instance of the problem in **O(n²)** time.
@@ -482,7 +511,7 @@ Stable Matching: Stable Matching: {(Alex:Amy), (Bob:Bella), (Chris:Caitlin)}
 -  **Definition of Instability:**
      - A matching is unstable if a hospital-resident pair prefers each other over their assigned matches, or if a hospital         has unfilled slots but prefers a different resident over one of its current assignees.
 
-### Stable Matching Summary
+### Summary
 **Stable Matching Problem**
 - The stable matching problem involves finding a pairing between two groups of size n (e.g., men and women) based on          their preference profiles.
 
