@@ -24,12 +24,41 @@ In Module 1, we will explore **algorithms**, why they matter, and how they help 
      - Python Example
      - Extension: Matching Residents to Hospitals
      - Summary
-5. [Five Representative Problems](Five-Representative-Problems)
+5. [Five Representative Problems](#Five-Representative-Problems)
      - Weighted Interval Scheduling
      - Bipartite Matching
      - Independent Set
      - Competitive Facility Location
      - Five Representative Problems Summary
+
+## Contents  
+
+1. [Key Terms](#Key-Terms)  
+2. [Stable Matching Problem](#Stable-Matching-Problem)  
+   - [Example](#Example-Stable-Matching-Problem)  
+3. [Stable Roommate Problem](#Stable-Roommate-Problem)  
+   - [Example](#Example-Stable-Roommate-Problem)  
+4. [Propose and Reject Algorithm (Gale-Shapley)](#Propose-and-Reject-Algorithm-(Gale-Shapley))  
+   - [Gale-Shapley Algorithm](#Gale-Shapley-Algorithm)  
+   - [How It Works](#How-It-Works)  
+   - [Example](#Example-Gale-Shapley)  
+   - [Proof of Correctness: Termination](#Proof-of-Correctness-Termination)  
+   - [Proof of Correctness: Perfection](#Proof-of-Correctness-Perfection)  
+   - [Proof of Correctness: Stability](#Proof-of-Correctness-Stability)  
+   - [SMP & GS Summary](#SMP-GS-Summary)  
+   - [Efficient Implementation of Gale-Shapley Algorithm](#Efficient-Implementation-of-Gale-Shapley-Algorithm)  
+   - [Understanding the Solution (Multiple Stable Matchings)](#Understanding-the-Solution-Multiple-Stable-Matchings)  
+   - [Understanding Man-Optimality](#Understanding-Man-Optimality)  
+   - [Woman Pessimality](#Woman-Pessimality)  
+   - [Python Example](#Python-Example)  
+   - [Extension: Matching Residents to Hospitals](#Extension-Matching-Residents-to-Hospitals)  
+   - [Summary](#Summary-Gale-Shapley)  
+5. [Five Representative Problems](#Five-Representative-Problems)  
+   - [Weighted Interval Scheduling](#Weighted-Interval-Scheduling)  
+   - [Bipartite Matching](#Bipartite-Matching)  
+   - [Independent Set](#Independent-Set)  
+   - [Competitive Facility Location](#Competitive-Facility-Location)  
+   - [Five Representative Problems Summary](#Five-Representative-Problems-Summary)  
 
 ## Key Terms
 - **Perfect matching** means that everyone is paired up in a one-to-one relationship, with no one left unmatched. Each person has exactly one partner.
