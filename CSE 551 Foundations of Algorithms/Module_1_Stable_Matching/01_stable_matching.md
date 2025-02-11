@@ -35,9 +35,9 @@ In Module 1, we will explore **algorithms**, why they matter, and how they help 
 
 1. [Key Terms](#Key-Terms)  
 2. [Stable Matching Problem](#Stable-Matching-Problem)  
-   - [Example](#Example-Stable-Matching-Problem)  
+   - [Example](#Example-Stable-Matching)  
 3. [Stable Roommate Problem](#Stable-Roommate-Problem)  
-   - [Example](#Example-Stable-Roommate-Problem)  
+   - [Example](#Example-Stable-Roommate)  
 4. [Propose and Reject Algorithm (Gale-Shapley)](#Propose-and-Reject-Algorithm-(Gale-Shapley))  
    - [Gale-Shapley Algorithm](#Gale-Shapley-Algorithm)  
    - [How It Works](#How-It-Works)  
@@ -59,6 +59,7 @@ In Module 1, we will explore **algorithms**, why they matter, and how they help 
    - [Independent Set](#Independent-Set)  
    - [Competitive Facility Location](#Competitive-Facility-Location)  
    - [Five Representative Problems Summary](#Five-Representative-Problems-Summary)  
+
 
 ## Key Terms
 - **Perfect matching** means that everyone is paired up in a one-to-one relationship, with no one left unmatched. Each person has exactly one partner.
