@@ -9,7 +9,7 @@ In Module 1, we will explore **algorithms**, why they matter, and how they help 
    - [SMP Example](#SMP-Example)
 3. [Stable Roomate Problem](#Stable-Roomate-Problem)
    - [SRP Example](#SRP-Example)
-4. [Propose and Reject Algorithm (Gale-Shapley)](#Propose-and-Reject-Algorithm-(Gale-Shapley))
+4. [Propose and Reject Algorithm (Gale-Shapley)](#Propose-and-Reject-Algorithm(Gale-Shapley))
    - [Gale-Shapley Algorithm](Gale-Shapley-Algorithm)
    - [How It Works](How-It-Works:)
    - [GS Example](GS-Example)
