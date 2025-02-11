@@ -8,11 +8,11 @@ In Module 1, we will explore **algorithms**, why they matter, and how they help 
 2. [Stable Matching Problem](#Stable-Matching-Problem)  
    - [Example](https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/01_stable_matching.md#stable-roommate-problem-example)  
 3. [Stable Roommate Problem](#Stable-Roommate-Problem)  
-   - [Stable Roommate Problem Example](#Stable-Roommate-Problem-Example)  
+   - [Example](https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/01_stable_matching.md#stable-roommate-problem-example-1)  
 4. [Propose and Reject Algorithm (Gale-Shapley)](#Propose-and-Reject-Algorithm-(Gale-Shapley))  
    - [Gale-Shapley Algorithm](#Gale-Shapley-Algorithm)  
    - [How It Works](#How-It-Works)  
-   - [Gale-Shapley Algorithm Example](#Gale-Shapley-Algorithm-Example)  
+   - [Example](https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/01_stable_matching.md#stable-roommate-problem-example-2)  
    - [Proof of Correctness: Termination](#Proof-of-Correctness-Termination)  
    - [Proof of Correctness: Perfection](#Proof-of-Correctness-Perfection)  
    - [Proof of Correctness: Stability](#Proof-of-Correctness-Stability)  
@@ -138,7 +138,7 @@ The **Gale-Shapley Algorithm** (also called the "Propose-and-Reject" algorithm) 
    - Otherwise, she rejects the proposal.
 3. Repeat until everyone is matched.
 
-### Gale-Shapley Algorithm Example
+### Example
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_001.png" width=45%, height=45%/>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_001.png" width=45%, height=45%/>
