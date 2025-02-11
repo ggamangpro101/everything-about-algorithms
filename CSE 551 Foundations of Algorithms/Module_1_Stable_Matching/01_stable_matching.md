@@ -12,7 +12,7 @@ In Module 1, we will explore **algorithms**, why they matter, and how they help 
 4. [Propose and Reject Algorithm (Gale-Shapley)](#Propose-and-Reject-Algorithm-(Gale-Shapley))  
    - [Gale-Shapley Algorithm](#Gale-Shapley-Algorithm)  
    - [How It Works](#How-It-Works)  
-   - [Example](#Example-Gale-Shapley)  
+   - [Gale-Shapley Algorithm Example](#Gale-Shapley-Algorithm-Example)  
    - [Proof of Correctness: Termination](#Proof-of-Correctness-Termination)  
    - [Proof of Correctness: Perfection](#Proof-of-Correctness-Perfection)  
    - [Proof of Correctness: Stability](#Proof-of-Correctness-Stability)  
@@ -138,7 +138,7 @@ The **Gale-Shapley Algorithm** (also called the "Propose-and-Reject" algorithm) 
    - Otherwise, she rejects the proposal.
 3. Repeat until everyone is matched.
 
-### Example
+### Gale-Shapley Algorithm Example
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_001.png" width=45%, height=45%/>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_001.png" width=45%, height=45%/>
@@ -522,7 +522,7 @@ Stable Matching: Stable Matching: {(Alex:Amy), (Bob:Bella), (Chris:Caitlin)}
 - This algorithm is a systematic way to solve the stable matching problem.
 
 - **Time Complexity: O(n²)**
-     - It is efficient because it uses structured steps to guarantee a stable matching in a reasonable amount of                   computational time.
+     - It is efficient because it uses structured steps to guarantee a stable matching in a reasonable amount of computational time.
 
 - **How It Works:**
      - Men (or one group) propose to women (or the other group) in order of their preferences.
@@ -551,7 +551,7 @@ Stable matching has many real-world applications:
 **Question: Does Man-Optimality Come at the Expense of Women?**
 - The man-optimality property often leads to woman-pessimality, where women get their least favorable stable match.
      - While all matches are stable, the outcome tends to favor the proposing group (in this case, men).
-     - This raises questions of fairness, as women may not receive their preferred matches even if alternative stable              matchings exist.
+     - This raises questions of fairness, as women may not receive their preferred matches even if alternative stable matchings exist.
 
 **Key takeaway:** The Gale-Shapley algorithm inherently favors the proposing side, which could create imbalances in preferences between the two groups.
 
@@ -575,7 +575,7 @@ Stable matching is a foundational problem in algorithms, demonstrating how prefe
 - **Goal:** Maximize the total weight of selected mutually compatible jobs.
 - **Explanation:**
      - Unlike interval scheduling, this focuses on maximizing the cumulative weight instead of the number of intervals.
-     - For example, intervals with weights **26** and **16** are chosen as they yield the highest total value without              overlap.
+     - For example, intervals with weights **26** and **16** are chosen as they yield the highest total value without overlap.
      - This involves dynamic programming techniques to compare cumulative weights efficiently.
 
 <p align=center>
@@ -608,7 +608,7 @@ Stable matching is a foundational problem in algorithms, demonstrating how prefe
 
 ### Competitive Facility Location
 - **Input:** A graph with weights assigned to nodes.
-- **Game:** Two players alternate selecting nodes. A node cannot be selected if one of its neighbors has already been                   chosen.
+- **Game:** Two players alternate selecting nodes. A node cannot be selected if one of its neighbors has already been chosen.
 - **Goal:** Maximize the total weight of selected nodes while adhering to the rules.
 - **Explanation:**
      - This is a combinatorial game problem where strategy matters.
