@@ -417,7 +417,7 @@ for i = 1 to n
 
 ### Python Example:
 ```python
-def gale_shapley(men_prefs, women_prefs):
+def gale_shapley_Algorithm(men_prefs, women_prefs):
     free_men = list(men_prefs.keys())
     engaged = {}
     women_ranks = {
@@ -441,21 +441,27 @@ def gale_shapley(men_prefs, women_prefs):
             else:
                 free_men.append(man)
 
-    return {man: woman for woman, man in engaged.items()}
+    result = [(man, woman) for woman, man in engaged.items()]
+    formatted_result = f"Stable Matching: {{{', '.join(f'({m}:{w})' for m, w in result)}}}"
+
+    return formatted_result
 
 # Example Usage
 men_preferences = {
-    "A": ["X", "Y", "Z"],
-    "B": ["Y", "X", "Z"],
-    "C": ["Z", "X", "Y"],
+    "Alex": ["Amy", "Bella", "Caitlin"],
+    "Bob": ["Bella", "Amy", "Caitlin"],
+    "Chris": ["Caitlin", "Amy", "Bella"],
 }
 women_preferences = {
-    "X": ["B", "A", "C"],
-    "Y": ["A", "C", "B"],
-    "Z": ["C", "B", "A"],
+    "Amy": ["Bob", "Alex", "Chris"],
+    "Bella": ["Alex", "Chris", "Bob"],
+    "Caitlin": ["Chris", "Bob", "Alex"],
 }
-result = gale_shapley(men_preferences, women_preferences)
+result = gale_shapley_Algorithm(men_preferences, women_preferences)
 print("Stable Matching:", result)
+```
+```
+Stable Matching: Stable Matching: {(Alex:Amy), (Bob:Bella), (Chris:Caitlin)}
 ```
 
 ### Extension: Matching Residents to Hospitals
@@ -535,7 +541,7 @@ Stable matching is a foundational problem in algorithms, demonstrating how prefe
      - Note: Some intervals, like C, are not included because they overlap with better options like B.
 
 <p align=center>
-<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Interval_Scheduling.png" height=45%, width=45%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Interval_Scheduling.png" height=60%, width=70%/>
 </p>
 
 ### Weighted Interval Scheduling
@@ -547,7 +553,7 @@ Stable matching is a foundational problem in algorithms, demonstrating how prefe
      - This involves dynamic programming techniques to compare cumulative weights efficiently.
 
 <p align=center>
-<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Weighted_Interval_Scheduling.png" height=45%, width=45%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Weighted_Interval_Scheduling.png" height=60%, width=70%/>
 </p>
 
 ### Bipartite Matching
@@ -559,7 +565,7 @@ Stable matching is a foundational problem in algorithms, demonstrating how prefe
      - Algorithms like max-flow can solve this efficiently for large graphs.
 
 <p align=center>
-<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Bipartite_Matching.png" height=45%, width=45%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Bipartite_Matching.png" height=40%, width=40%/>
 </p>
 
 ### Independent Set
@@ -571,7 +577,7 @@ Stable matching is a foundational problem in algorithms, demonstrating how prefe
      - This problem is computationally hard (NP-complete), meaning it’s challenging to solve optimally for large graphs.
 
 <p align=center>
-<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Multiple_Stable_Matching_003.png" height=45%, width=45%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Independent_Set.png" height=45%, width=45%/>
 </p>
 
 ### Competitive Facility Location
