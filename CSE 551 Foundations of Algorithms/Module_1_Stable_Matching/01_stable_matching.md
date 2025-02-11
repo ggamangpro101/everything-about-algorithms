@@ -6,7 +6,7 @@ In Module 1, we will explore **algorithms**, why they matter, and how they help 
 
 1. [Key Terms](#Key-Terms)  
 2. [Stable Matching Problem](#Stable-Matching-Problem)  
-   - [Stable Matching Problem Example](#Stable-Matching-Problem-Example)  
+   - [Stable Matching Problem Example](https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/01_stable_matching.md#stable-roommate-problem-example)  
 3. [Stable Roommate Problem](#Stable-Roommate-Problem)  
    - [Stable Roommate Problem Example](#Stable-Roommate-Problem-Example)  
 4. [Propose and Reject Algorithm (Gale-Shapley)](#Propose-and-Reject-Algorithm-(Gale-Shapley))  
