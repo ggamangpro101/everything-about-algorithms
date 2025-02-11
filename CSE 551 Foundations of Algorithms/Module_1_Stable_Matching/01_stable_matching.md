@@ -6,7 +6,7 @@ In Module 1, we will explore **algorithms**, why they matter, and how they help 
 
 1. [Key Terms](#Key-Terms)  
 2. [Stable Matching Problem](#Stable-Matching-Problem)  
-   - [Example](#Example-Stable-Matching)  
+   - [table Matching Problem Example](#Stable-Matching-Problem-Example)  
 3. [Stable Roommate Problem](#Stable-Roommate-Problem)  
    - [Example](#Example-Stable-Roommate)  
 4. [Propose and Reject Algorithm (Gale-Shapley)](#Propose-and-Reject-Algorithm-(Gale-Shapley))  
@@ -23,7 +23,7 @@ In Module 1, we will explore **algorithms**, why they matter, and how they help 
    - [Woman Pessimality](#Woman-Pessimality)  
    - [Python Example](#Python-Example)  
    - [Extension: Matching Residents to Hospitals](#Extension-Matching-Residents-to-Hospitals)  
-   - [Summary](#Summary-Gale-Shapley)  
+   - [Summary](#Summary)  
 5. [Five Representative Problems](#Five-Representative-Problems)  
    - [Weighted Interval Scheduling](#Weighted-Interval-Scheduling)  
    - [Bipartite Matching](#Bipartite-Matching)  
@@ -42,7 +42,7 @@ In Module 1, we will explore **algorithms**, why they matter, and how they help 
 ## Stable Matching Problem
 The **Stable Matching Problem** involves finding a stable pairing between two equally sized groups, where each member has a ranked preference list. The goal is to ensure that no two individuals would prefer each other over their assigned partners. This concept can be demonstrated through various examples.
 
-### SMP Example
+### Stable Matching Problem Example
 Given three men **(Alex, Bob, David)** and three women **(Emily, Megan, Grace)**, along with their preference lists, determine a **stable matching** where no two individuals prefer each other over their assigned partners.
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Mens_Pref_List_001.png" width=45%, height=45%/>
