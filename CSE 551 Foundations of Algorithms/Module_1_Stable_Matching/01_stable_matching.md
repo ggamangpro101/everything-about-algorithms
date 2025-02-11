@@ -6,7 +6,7 @@ In Module 1, we will explore **algorithms**, why they matter, and how they help 
 
 1. [Key Terms](#Key-Terms)  
 2. [Stable Matching Problem](#Stable-Matching-Problem)  
-   - [Stable Matching Problem Example](https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/01_stable_matching.md#stable-roommate-problem-example)  
+   - [Example](https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/01_stable_matching.md#stable-roommate-problem-example)  
 3. [Stable Roommate Problem](#Stable-Roommate-Problem)  
    - [Stable Roommate Problem Example](#Stable-Roommate-Problem-Example)  
 4. [Propose and Reject Algorithm (Gale-Shapley)](#Propose-and-Reject-Algorithm-(Gale-Shapley))  
@@ -42,7 +42,7 @@ In Module 1, we will explore **algorithms**, why they matter, and how they help 
 ## Stable Matching Problem
 The **Stable Matching Problem** involves finding a stable pairing between two equally sized groups, where each member has a ranked preference list. The goal is to ensure that no two individuals would prefer each other over their assigned partners. This concept can be demonstrated through various examples.
 
-### Stable Matching Problem Example
+### Example
 Given three men **(Alex, Bob, David)** and three women **(Emily, Megan, Grace)**, along with their preference lists, determine a **stable matching** where no two individuals prefer each other over their assigned partners.
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Mens_Pref_List_001.png" width=45%, height=45%/>
@@ -77,7 +77,7 @@ Given three men **(Alex, Bob, David)** and three women **(Emily, Megan, Grace)**
 
 Unlike the Stable Matching Problem, where a stable matching always exists, the Stable Roommate Problem does not guarantee a stable matching.
 
-### Stable Roommate Problem Example
+### Example
 Given four individuals (**Alex, Bob, Chris, David**) and their ranked preferences, determine whether a stable roommate assignment exists.
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Roommate_Pref_List_001.png" width=40%, height=40%/>
