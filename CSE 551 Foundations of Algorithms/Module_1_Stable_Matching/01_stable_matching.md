@@ -6,9 +6,9 @@ In Module 1, we will explore **algorithms**, why they matter, and how they help 
 
 1. [Key Terms](#Key-Terms)  
 2. [Stable Matching Problem](#Stable-Matching-Problem)  
-   - [table Matching Problem Example](#Stable-Matching-Problem-Example)  
+   - [Stable Matching Problem Example](#Stable-Matching-Problem-Example)  
 3. [Stable Roommate Problem](#Stable-Roommate-Problem)  
-   - [Example](#Example-Stable-Roommate)  
+   - [Stable Roommate Problem Example](#Stable-Roommate-Problem-Example)  
 4. [Propose and Reject Algorithm (Gale-Shapley)](#Propose-and-Reject-Algorithm-(Gale-Shapley))  
    - [Gale-Shapley Algorithm](#Gale-Shapley-Algorithm)  
    - [How It Works](#How-It-Works)  
@@ -76,7 +76,8 @@ Given three men **(Alex, Bob, David)** and three women **(Emily, Megan, Grace)**
 **A: Not always.**
 
 Unlike the Stable Matching Problem, where a stable matching always exists, the Stable Roommate Problem does not guarantee a stable matching.
-### Example
+
+### Stable Roommate Problem Example
 Given four individuals (**Alex, Bob, Chris, David**) and their ranked preferences, determine whether a stable roommate assignment exists.
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Roommate_Pref_List_001.png" width=40%, height=40%/>
@@ -368,14 +369,9 @@ No unstable pairs exist because a woman only trades up during the algorithm, and
 
 Since the assumption of instability leads to contradictions in all cases, it proves that **no unstable pairs exist**. Therefore, the **Gale-Shapley algorithm guarantees a stable matching** where all pairs follow the stability rules.
 
-###  SMP & GS Summary
-- **Stable Matching Problem**: The task is to find a stable matching between two groups of size n, ensuring no unstable 
-  pairs exist.
-- **Gale-Shapley Algorithm**: Guarantees to find a stable matching for any instance of the problem in **O(n²)** time.
-- **Questions**:  
-     **Q:** How can the Gale-Shapley algorithm be implemented efficiently in terms of computation?  
-       
-     **Q:** If multiple stable matchings exist, which one does the algorithm produce?  
+**Questions**:  
+- **Q:** How can the Gale-Shapley algorithm be implemented efficiently in terms of computation?      
+- **Q:** If multiple stable matchings exist, which one does the algorithm produce?  
 
 ### Efficient Implementation of Gale-Shapley Algorithm
 - **Representation**: Men and women are indexed from 1 to n.
@@ -510,11 +506,11 @@ Stable Matching: Stable Matching: {(Alex:Amy), (Bob:Bella), (Chris:Caitlin)}
      - Variant 3: Hospitals may accept multiple residents (limited polygamy).
 
 -  **Definition of Instability:**
-     - A matching is unstable if a hospital-resident pair prefers each other over their assigned matches, or if a hospital         has unfilled slots but prefers a different resident over one of its current assignees.
+     - A matching is unstable if a hospital-resident pair prefers each other over their assigned matches, or if a hospital has unfilled slots but prefers a different resident over one of its current assignees.
 
 ### Summary
 **Stable Matching Problem**
-- The stable matching problem involves finding a pairing between two groups of size n (e.g., men and women) based on          their preference profiles.
+- The stable matching problem involves finding a pairing between two groups of size n (e.g., men and women) based on their preference profiles.
 
 - **A stable matching ensures:**
      - No pair (man and woman) would rather be with each other than with their assigned partners.
