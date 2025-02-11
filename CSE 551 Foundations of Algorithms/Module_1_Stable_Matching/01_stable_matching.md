@@ -6,30 +6,30 @@ In Module 1, we will explore **algorithms**, why they matter, and how they help 
 
 1. [Key Terms](#Key-Terms)
 2. [Stable Matching Problem](#Stable-Matching-Problem)
-- [Example]
+- Example
 3. [Stable Roomate Problem](#Stable-Roomate-Problem)
-- [Example]
+- Example
 4. [Propose and Reject Algorithm (Gale-Shapley)](#Propose-and-Reject-Algorithm-(Gale-Shapley))
-- [Gale-Shapley Algorithm]
-- [How It Works]
-- [Example]
-- [Proof of Correctness: Termination]
-- [Proof of Correctness: Perfection]
-- [Proof of Correctness: Stability]
-- [SMP & GS Summary]
-- [Efficient Implementation of Gale-Shapley Algorithm]
-- [Understanding the solution(Multiple Stable Matchings)]
-- [Understanding Man-Optimality]
-- [Woman Pessimality]
-- [Python Example]
-- [Extension: Matching Residents to Hospitals]
-- [Summary]
+- Gale-Shapley Algorithm
+- How It Works
+- Example
+- Proof of Correctness: Termination
+- Proof of Correctness: Perfection
+- Proof of Correctness: Stability
+- SMP & GS Summary
+- Efficient Implementation of Gale-Shapley Algorithm
+- Understanding the solution(Multiple Stable Matchings)
+- Understanding Man-Optimality
+- Woman Pessimality
+- Python Example
+- Extension: Matching Residents to Hospitals
+- Summary
 5. [Five Representative Problems](Five-Representative-Problems)
-- [Weighted Interval Scheduling]
-- [Bipartite Matching]
-- [Independent Set]
-- [Competitive Facility Location]
-- [Five Representative Problems Summary]
+- Weighted Interval Scheduling
+- Bipartite Matching
+- Independent Set
+- Competitive Facility Location
+- Five Representative Problems Summary
 
 ## Key Terms
 - **Perfect matching** means that everyone is paired up in a one-to-one relationship, with no one left unmatched. Each person has exactly one partner.
