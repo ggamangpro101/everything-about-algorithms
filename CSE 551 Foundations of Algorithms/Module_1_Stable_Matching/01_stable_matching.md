@@ -6,30 +6,30 @@ In Module 1, we will explore **algorithms**, why they matter, and how they help 
 
 1. [Key Terms](#Key-Terms)
 2. [Stable Matching Problem](#Stable-Matching-Problem)
-   - [SMP Example](#SMP-Example)
+- [Example]
 3. [Stable Roomate Problem](#Stable-Roomate-Problem)
-   - [SRP Example](#SRP-Example)
-4. [Propose and Reject Algorithm (Gale-Shapley)](#Propose-and-Reject-Algorithm(Gale-Shapley))
-   - [Gale-Shapley Algorithm](Gale-Shapley-Algorithm)
-   - [How It Works](How-It-Works:)
-   - [GS Example](GS-Example)
-   - [Proof of Correctness: Termination](Proof-of-Correctness:-Termination)
-   - [Proof of Correctness: Perfection](Proof-of-Correctness:-Perfection)
-   - [Proof of Correctness: Stability](Proof-of-Correctness:-Stability)
-   - [SMP & GS Summary](SMP-&-GS-Summary)
-   - [Efficient Implementation of Gale-Shapley Algorithm](Efficient-Implementation-of-Gale-Shapley-Algorithm)
-   - [Understanding the solution(Multiple Stable Matchings)](Understanding-the-solution(Multiple-Stable-Matchings))
-   - [Understanding Man-Optimality](Understanding-Man-Optimality)
-   - [Woman Pessimality](Woman-Pessimality)
-   - [Python Example](Python-Example)
-   - [Extension: Matching Residents to Hospitals](Extension:-Matching-Residents-to-Hospitals)
-   - [Summary](Summary)
+- [Example]
+4. [Propose and Reject Algorithm (Gale-Shapley)](#Propose-and-Reject-Algorithm-(Gale-Shapley))
+- [Gale-Shapley Algorithm]
+- [How It Works]
+- [Example]
+- [Proof of Correctness: Termination]
+- [Proof of Correctness: Perfection]
+- [Proof of Correctness: Stability]
+- [SMP & GS Summary]
+- [Efficient Implementation of Gale-Shapley Algorithm]
+- [Understanding the solution(Multiple Stable Matchings)]
+- [Understanding Man-Optimality]
+- [Woman Pessimality]
+- [Python Example]
+- [Extension: Matching Residents to Hospitals]
+- [Summary]
 5. [Five Representative Problems](Five-Representative-Problems)
-   - [Weighted Interval Scheduling](Weighted-Interval-Scheduling)
-   - [Bipartite Matching](Bipartite-Matching)
-   - [Independent Set](Independent-Set)
-   - [Competitive Facility Location](Competitive-Facility-Location)
-   - [Five Representative Problems Summary](Five-Representative-Problems-Summary)
+- [Weighted Interval Scheduling]
+- [Bipartite Matching]
+- [Independent Set]
+- [Competitive Facility Location]
+- [Five Representative Problems Summary]
 
 ## Key Terms
 - **Perfect matching** means that everyone is paired up in a one-to-one relationship, with no one left unmatched. Each person has exactly one partner.
@@ -75,7 +75,7 @@ Given three men **(Alex, Bob, David)** and three women **(Emily, Megan, Grace)**
 **A: Not always.**
 
 Unlike the Stable Matching Problem, where a stable matching always exists, the Stable Roommate Problem does not guarantee a stable matching.
-### SRP Example
+### Example
 Given four individuals (**Alex, Bob, Chris, David**) and their ranked preferences, determine whether a stable roommate assignment exists.
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Roommate_Pref_List_001.png" width=40%, height=40%/>
@@ -136,7 +136,7 @@ The **Gale-Shapley Algorithm** (also called the "Propose-and-Reject" algorithm) 
    - Otherwise, she rejects the proposal.
 3. Repeat until everyone is matched.
 
-### GS Example
+### Example
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Men_001.png" width=45%, height=45%/>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_1_Stable_Matching/png/Gale_Shapley_Women_001.png" width=45%, height=45%/>
