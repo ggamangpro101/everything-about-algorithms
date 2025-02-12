@@ -12,7 +12,7 @@ In Module 2, we will learn about Greedy Algorithms. The algorithms covered inclu
 ## Interval Scheduling
 - **Concept:** Interval scheduling is a problem where we are given a set of jobs with their start and finish times.  
 - **Goal:** To find the maximum subset of mutually compatible jobs—meaning jobs that do not overlap.  
-- **Key Idea:** A job j starts at s_j and finishes at f_j. Two jobs are **compatible** if their time intervals **do not overlap**.  
+- **Key Idea:** A job j starts at $\ s_j $ and finishes at $\ f_j $. Two jobs are **compatible** if their time intervals **do not overlap**.  
 - **Example:** The given jobs (labeled as 'a' to 'h') are represented as horizontal bars on a timeline.  
 - **Optimal Solution (OPT):** The selected subset of jobs is B, E, H, as they form the largest set of non-overlapping intervals.  
 - **Observation:** The smallest job (C) is not in any optimal solution, and the job that starts first (A) is also not included.  
@@ -24,9 +24,9 @@ In Module 2, we will learn about Greedy Algorithms. The algorithms covered inclu
 ### Interval Scheduling: Greedy Algorithm Template
 - **Greedy Strategy:** The greedy algorithm considers jobs in some order and takes each job only if it is compatible with the ones already taken.
 - **Different Ordering Approaches:**
-  - Earliest Start Time: Pick jobs in ascending order of start times (s_j).
-  - Earliest Finish Time: Pick jobs in ascending order of finish times (f_j).
-  - Shortest Interval: Pick jobs with the shortest duration (f_j − s_j).
+  - Earliest Start Time: Pick jobs in ascending order of start times ($\ s_j $).
+  - Earliest Finish Time: Pick jobs in ascending order of finish times ($\ f_j $).
+  - Shortest Interval: Pick jobs with the shortest duration ($\ f_j−s_j $).
   - Fewest Conflicts: Pick jobs that have the least number of conflicts (overlaps) with other jobs.
 
 ## Scheduling to Minimize Lateness
