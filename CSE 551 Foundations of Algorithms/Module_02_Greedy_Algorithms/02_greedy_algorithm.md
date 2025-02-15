@@ -34,17 +34,17 @@ In Module 2, we will learn about Greedy Algorithms. The algorithms covered inclu
 
 **Breaks Earliest Start Time:** The first approach (earliest start time) can lead to conflicts as jobs that start early may overlap with many others.
 <p align=center>
-<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_02_Greedy_Algorithms/png/Interval_Scheduling_012.png" width=60%, height=60%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_02_Greedy_Algorithms/png/Interval_Scheduling_002.png" width=60%, height=60%/>
 </p>
 
 **Breaks Shortest Interval:** Choosing the shortest jobs may lead to missing a better overall selection.
 <p align=center>
-<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_02_Greedy_Algorithms/png/Interval_Scheduling_013.png" width=60%, height=60%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_02_Greedy_Algorithms/png/Interval_Scheduling_002-1.png" width=60%, height=60%/>
 </p>
 
 **Breaks Fewest Conflicts:** Prioritizing jobs with the fewest conflicts can sometimes lead to suboptimal results.
 <p align=center>
-<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_02_Greedy_Algorithms/png/Interval_Scheduling_014.png" width=60%, height=60%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_02_Greedy_Algorithms/png/Interval_Scheduling_002-2.png" width=60%, height=60%/>
 </p>
 
 ### Greedy Algorithm for Interval Scheduling
