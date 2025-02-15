@@ -184,6 +184,21 @@ Greedy algorithm for solving the interval partitioning problem.
 - The **priority queue keeps track of classroom availability**.
 - **Efficiently assigns classrooms** based on lecture timings.
 
+### Proof that the Greedy Algorithm is Optimal
+proof that the greedy algorithm is optimal for interval partitioning.
+
+- **Key Observation**
+  - The greedy algorithm never assigns two overlapping lectures to the same classroom.
+- **Proof Strategy**
+  - Define d as the number of classrooms used by the greedy algorithm.
+  - Why does it use d classrooms?
+    - The last classroom (Classroom d) was needed because a lecture conflicted with all d−1 classrooms.
+  - Sorting by Start Time
+    - Sorting ensures that conflicts are handled optimally.
+    - Any lecture starting at $\ s_j$ is assigned optimally.
+- **Key Result**
+  - Since at least d classrooms are required (based on depth),**the greedy algorithm provides the minimum possible number of classrooms**.
+
 ## Scheduling to Minimize Lateness
 
 ## Optimal Offline Caching
