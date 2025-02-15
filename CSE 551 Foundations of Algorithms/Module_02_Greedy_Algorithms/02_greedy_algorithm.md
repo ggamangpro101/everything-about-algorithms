@@ -18,7 +18,7 @@ In Module 2, we will learn about Greedy Algorithms. The algorithms covered inclu
 - **Observation:** The smallest job (C) is not in any optimal solution, and the job that starts first (A) is also not included.  
 
 <p align=center>
-<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_02_Greedy_Algorithms/png/Interval_Scheduling_001.png" width=60%, height=60%/>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_02_Greedy_Algorithms/png/Interval_Scheduling_001.png" width=70%, height=70%/>
 </p>
 
 ### Interval Scheduling: Greedy Algorithm Template
@@ -99,6 +99,7 @@ This slide introduces a proof by contradiction to show that the greedy algorithm
   - This implies that the optimal solution could have used the greedy choice without losing optimality, contradicting our assumption that the greedy algorithm was suboptimal.
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_02_Greedy_Algorithms/png/Interval_Scheduling_016.png" width=70%, height=70%/>
+</p>
 
 - **Conclusion**  
 Since we reached a contradiction, the **greedy algorithm must be optimal**.
@@ -112,10 +113,76 @@ Since we reached a contradiction, the **greedy algorithm must be optimal**.
   - This contradicts the assumption that the greedy solution is suboptimal.
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_02_Greedy_Algorithms/png/Interval_Scheduling_016.png" width=70%, height=70%/>
+</p>
 
-**Conclusion**  
+- **Conclusion**  
   - The greedy algorithm always produces an optimal solution.
   - Greedy choice property holds, meaning making the locally optimal choice at each step leads to a globally optimal solution.
+
+### Interval Partitioning
+Interval partitioning problem is different from interval scheduling.
+
+- **Problem Definition**
+  - Each lecture j has a start time $\ s_j$ and end time $\ f_j$.
+  - Two lectures cannot be assigned to the same classroom if they overlap.
+  - Goal: Find the minimum number of classrooms needed so that all lectures are scheduled without conflicts.
+- **Example**
+  - The diagram shows a schedule where 4 classrooms are required to schedule 10 lectures.
+  - Key Observation: Some lectures overlap, so we must assign them to different classrooms.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_02_Greedy_Algorithms/png/Interval_Scheduling_018.png" width=70%, height=70%/>
+</p>
+
+### Improved Scheduling - Using Fewer Classrooms
+This is an improved version of the interval partitioning schedule.
+
+- **Reducing the Number of Classrooms**
+  - A new scheduling strategy reduces the number of classrooms from 4 to 3.
+  - How?
+    - By reordering the lectures to maximize the reuse of classrooms.
+2. **Why is this Important?**
+  - The number of required classrooms directly relates to the depth of overlapping intervals.
+  - Fewer classrooms = more efficient scheduling.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_02_Greedy_Algorithms/png/Interval_Scheduling_019.png" width=70%, height=70%/>
+</p>
+
+### Lower Bound on the Optimal Number of Classrooms
+Depth of a set of intervals, which helps us determine the minimum number of classrooms required.
+- **Definition: Depth**
+  - Depth of a set of intervals is the maximum number of intervals that overlap at any point in time.
+  - The number of classrooms needed is at least the depth.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_02_Greedy_Algorithms/png/Interval_Scheduling_019.png" width=70%, height=70%/>
+</p>
+
+- **Key Observations**
+  - If at any point 3 lectures overlap, then at least 3 classrooms are needed.
+  - The diagram illustrates this concept, showing that at 9:30, three lectures overlap.
+- **Question**
+  - Important theoretical question:
+    - Can we always schedule lectures using exactly the depth of intervals?
+    - This question is important because it suggests that the greedy algorithm might be optimal.
+
+### Interval Partitioning - Greedy Algorithm
+Greedy algorithm for solving the interval partitioning problem.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_02_Greedy_Algorithms/png/Interval_Scheduling_020.png" width=70%, height=70%/>
+</p>
+- Greedy Strategy
+  - Sort the lectures by start time.
+  - Iterate through each lecture:
+    - If a lecture fits into an existing classroom, assign it there.
+    - Otherwise, allocate a new classroom.
+
+- Implementation Details
+  - The algorithm runs in O(nlogn) time:
+    - Sorting the lectures by start time takes O(nlogn).
+    - Assigning classrooms using a priority queue takes O(nlogn).
+    
+**Why a Priority Queue?**
+- The **priority queue keeps track of classroom availability**.
+- **Efficiently assigns classrooms** based on lecture timings.
 
 ## Scheduling to Minimize Lateness
 
