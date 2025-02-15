@@ -94,17 +94,20 @@ This slide introduces a proof by contradiction to show that the greedy algorithm
       where r is the largest possible number of common jobs between the greedy and optimal solutions.
 
 - Introducing the Contradiction
-  - The greedy algorithm selects job $\ i_r+1$ which finishes **before** $\ j_r+1$  
-  ​- Since $\ i_r+1$ finishes before $\ j_r+1$, it means that replacing $\ j_r+1$ with $\ i_r+1$ still produces a valid schedule.  
+  - The greedy algorithm selects job $\ i_{r+1}$ which finishes **before** $\ j_{r+1}$  
+  ​- Since $\ i_{r+1}$ finishes before $\ j_{r+1}$, it means that replacing $\ j_{r+1}$ with $\ i_{r+1}$ still produces a valid schedule.  
   - This implies that the optimal solution could have used the greedy choice without losing optimality, contradicting our assumption that the greedy algorithm was suboptimal.
 <p align=center>
 <img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_02_Greedy_Algorithms/png/Interval_Scheduling_016.png" width=70%, height=70%/>
+
+- **Conclusion**  
+Since we reached a contradiction, the **greedy algorithm must be optimal**.
 
 ### **Continuation of the Proof - Contradiction Completes the Proof**
 - **Same Assumption and Setup**
   - The proof setup remains the same, where we assumed that the greedy algorithm is not optimal.
 - **Finalizing the Contradiction**
-  - Since job $\ i_r+1$ finishes before $\ j_r+1$, replacing $\ j_r+1$ with $\ i_r+1$ still maintains a valid and feasible solution.
+  - Since job $\ i_{r+1}$ finishes before $\ j_{r+1}$, replacing $\ j_{r+1}$ with $\ i_{r+1}$ still maintains a valid and feasible solution.
   - The new solution contains at least as many jobs as the optimal one, meaning the greedy algorithm is at least as good as the optimal solution.
   - This contradicts the assumption that the greedy solution is suboptimal.
 <p align=center>
@@ -113,10 +116,6 @@ This slide introduces a proof by contradiction to show that the greedy algorithm
 **Conclusion**  
   - The greedy algorithm always produces an optimal solution.
   - Greedy choice property holds, meaning making the locally optimal choice at each step leads to a globally optimal solution.
-
-
-- **Conclusion**
-Since we reached a contradiction, the **greedy algorithm must be optimal**.
 
 ## Scheduling to Minimize Lateness
 
