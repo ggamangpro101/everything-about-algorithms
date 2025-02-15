@@ -24,10 +24,27 @@ In Module 2, we will learn about Greedy Algorithms. The algorithms covered inclu
 ### Interval Scheduling: Greedy Algorithm Template
 - **Greedy Strategy:** The greedy algorithm considers jobs in some order and takes each job only if it is compatible with the ones already taken.
 - **Different Ordering Approaches:**
-  - Earliest Start Time: Pick jobs in ascending order of start times ($\ s_j $).
-  - Earliest Finish Time: Pick jobs in ascending order of finish times ($\ f_j $).
-  - Shortest Interval: Pick jobs with the shortest duration ($\ f_j−s_j $).
-  - Fewest Conflicts: Pick jobs that have the least number of conflicts (overlaps) with other jobs.
+  - **Earliest Start Time:** Pick jobs in ascending order of start times ($\ s_j $).
+  - **Earliest Finish Time:** Pick jobs in ascending order of finish times ($\ f_j $).
+  - **Shortest Interval:** Pick jobs with the shortest duration ($\ f_j−s_j $).
+  - **Fewest Conflicts:** Pick jobs that have the least number of conflicts (overlaps) with other jobs.
+
+### Visual Representation of Greedy Algorithms
+**Illustration:**
+**Breaks Earliest Start Time:** The first approach (earliest start time) can lead to conflicts as jobs that start early may overlap with many others.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_02_Greedy_Algorithms/png/Interval_Scheduling_001.png" width=60%, height=60%/>
+</p>
+
+**Breaks Shortest Interval:** Choosing the shortest jobs may lead to missing a better overall selection.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_02_Greedy_Algorithms/png/Interval_Scheduling_001.png" width=60%, height=60%/>
+</p>
+
+**Breaks Fewest Conflicts:** Prioritizing jobs with the fewest conflicts can sometimes lead to suboptimal results.
+<p align=center>
+<img src="https://github.com/ggamangpro101/everything-about-algorithms/blob/master/CSE%20551%20Foundations%20of%20Algorithms/Module_02_Greedy_Algorithms/png/Interval_Scheduling_001.png" width=60%, height=60%/>
+</p>
 
 ## Scheduling to Minimize Lateness
 
